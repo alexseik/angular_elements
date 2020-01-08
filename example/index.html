@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Custom element example</title>
+    <script src="./custom-button-element.js"></script>
+  </head>
+  <app-button label="First label"></app-button>
+  <script>
+    const button = document.querySelector('app-button');
+    button.addEventListener('action', event => {
+      console.log(`Action created ${event.detail}`);
+    });
+    setTimeout(() => {
+      button.label = "Second label"
+    }, 4000);
+  </script>
+</html>
